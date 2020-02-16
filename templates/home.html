@@ -1,0 +1,96 @@
+   {% extends 'base.html' %}
+
+
+   {% block head %}
+
+     {% if title %}
+      <title>News headlines</title>
+      {% else %}
+       <title>home</title>
+       {% endif %}
+       
+   <div class="my-weather">
+     <h5>Weather today</h5>
+
+      <p><label>City : {{weather.city}},{{weather.country}}</label></p>
+      <p><label>{{weather.description}} | {{weather.temperature}}&#8451;</label> </p>
+
+   </div>
+
+
+   {% endblock %}
+
+
+
+   {% block content %}
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-lg-12" class="col-sm-12">
+
+          <aside class="aside-content">
+
+            <h4>Currency Today</h4>
+            <form>
+                 <select class="selectpicker" data-width='fit' data-style='btn-info'  name="currency_from">
+
+                         {% for currency in currencies %}
+                             <option value="{{currency}}"
+                               {{"selected ='selected' " if currency_from == currency}}>
+                                {{currency}} </option>
+                         {% endfor %}
+                      </select>
+
+                <select class="selectpicker" data-width='fit'  data-style='btn-info'  name='currency_to'>
+                     {% for currency in currencies %}
+                         <option value="{{currency}}"
+                         {{"selected = 'selected'" if currency_to == currency}}>
+                            {{currency}} </option>
+                     {% endfor %}
+                 </select>
+                 <input class="btn btn-secondary" type="submit" Value="Submit">
+             </form>
+
+
+             <div class="currency_display">
+               <b> {{currency_from}} = {{currency_to}} {{rate}}</b>
+             </div>
+          </aside><!--aside-content-->
+
+             <!-- <div class="row" class="dropdownselect">
+               <div class="col-lg-12" class="col-sm-12"> -->
+                   <h4>Select Publication</h4>
+                   <form>
+                        <select class="selectpicker" data-live-search="true"  class="selectpicker" data-style="btn-info" name="publication"> <!--very important name which come from the views-->
+                                {% for pub in RSS_FEEDS %}
+                                    <option data-tokens="{{ pub }}">{{ pub }}</option>
+                                {% endfor %}
+                         </select>
+                         <input class="btn btn-secondary" type="submit" value="Submit"/>
+                    </form>
+
+               </div>
+             </div><!--end DropdownList here-->
+
+                   <div class="headings">
+                     <h3>Headlines Today</h3>
+                   </div>
+
+            <div class="the_articles">
+                <div class="col-sm-12" class="col-lg-12">
+
+                  {% for article in articles %}
+                      <p><a href="{{article.link}}" target="_blank" data-toggle='popover' data-placement='bottom' data-trigger='hover' data-content="{{article.summary}} ">{{article.title}} </a>   [<i>{{article.published}}</i>]</p><br>
+
+                  {% endfor %}
+
+
+                </div><!--end row here-->
+          </div>
+       </main> <!--endmain here-->
+
+
+
+
+
+   {% endblock %}

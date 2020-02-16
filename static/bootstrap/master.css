@@ -1,0 +1,60 @@
+
+ /* Popover Header */
+ .popover-header {
+
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+}
+.popover-body {
+    color: #fff;
+    padding: 25px;
+
+    background-color:#787878 ;
+}
+
+
+
+.jumbotron{
+ background-color: #3c3c3c;
+ color: #fff;
+ text-align: center;
+ border-radius: 0px;
+ padding-top: 0px;
+
+}
+
+#footer{
+  width: 100%;
+  background-color: #3c3c3c;
+  height: 30%;
+  float: left;
+  clear:left;
+  padding: 20px;
+}
+
+.footer{
+  text-align: center;
+  color: #fff;
+  margin: 8px;
+
+
+}
+
+.main{
+  padding-top: 30px;
+  line-height: 1.5;
+  float: left;
+}
+
+.aside-content{
+  float: right;
+  width 25%;
+  margin: 5px;
+}
+.currency_display{
+  margin: 1rem 3rem;
+}
+.my-weather{
+  
+}
