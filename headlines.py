@@ -10,7 +10,7 @@ from flask import render_template
 app = Flask(__name__)
 
 Defaults = {
-    "publication": 'diggers.news',
+    "publication": 'Lusakatimes',
     "city": 'Lusaka',
     "currency_from": 'USD',
     "currency_to": 'ZMW',
@@ -19,37 +19,39 @@ Defaults = {
 RSS_FEEDS = {
 
     # World News
-    'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
-    'cnn': 'http://rss.cnn.com/rss/edition.rss',
-    "timesofindia": 'https://timesofindia.indiatimes.com/rssfeeds/296589292.cms',
-    "nytimes": 'https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml',
-    "europe & Africa": 'https://allafrica.com/tools/headlines/rdf/europeandafrica/headlines.rdf',
-
+    'Bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
+    'Cnn': 'http://rss.cnn.com/rss/edition.rss',
+    "Nytimes": 'https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml',
+    "Politico":'https://rss.politico.com/politics-news.xml',
+    "Yahoo Sports": 'https://sports.yahoo.com/rss/',
+    "NewYork post": 'https://nypost.com/feed/',
+    "Climate Change":'https://news.un.org/feed/subscribe/en/news/topic/climate-change/feed/rss.xml',
+    "America magazine":'https://www.americamagazine.org/feeds/complete/rss.xml'
+    
 
     # Local News
-    "zambiareports": 'https://zambiareports.com/feed/',
-    "lusakatimes": 'https://www.lusakatimes.com/feed/',
-    "diggers.news": 'https://diggers.news/feed/',
-    "zambianintelligencenews": 'http://www.zambianintelligencenews.com/feed/',
-    "zambianeye": 'https://zambianeye.com/feed/',
+    "Zambiareports": 'https://zambiareports.com/feed/',
+    "Lusakatimes": 'https://www.lusakatimes.com/feed/',
+    "Diggers.news": 'https://diggers.news/feed/',
+    
+     # Health Me
+    "Mayoclinic": 'https://www.mayoclinic.org/rss/all-health-information-topics',
+    "Mayoclinic": 'https://www.mayoclinic.org/rss/ask-a-specialist',
+    "Mayoclinic": 'https://www.mayoclinic.org/rss/research-news',
+
+   
 
     # Africa
-    "middle east and africa": 'https://allafrica.com/tools/headlines/rdf/middleeastandafrica/headlines.rdf',
-    "central africa": 'https://allafrica.com/tools/headlines/rdf/centralafrica/headlines.rdf',
-    "north africa": 'https://allafrica.com/tools/headlines/rdf/northafrica/headlines.rdf',
-    "east africa": 'https://allafrica.com/tools/headlines/rdf/eastafrica/headlines.rdf',
-    "westafrica": 'https://allafrica.com/tools/headlines/rdf/westafrica/headlines.rdf',
-    "southern africa": 'https://allafrica.com/tools/headlines/rdf/southernafrica/headlines.rdf',
-    "corruption": 'https://allafrica.com/tools/headlines/rdf/corruption/headlines.rdf',
-    "news24": 'http://feeds.news24.com/articles/news24/Africa/rss',
-
+    "UN.News":'https://news.un.org/feed/subscribe/en/news/region/africa/feed/rss.xml',
+    
     # Entertainment
-    "naijavibes": 'https://www.naijavibes.com/feed',
-    "zambianmusicblog": 'https://zambianmusicblog.co/feed',
-
+    "Etonline":'https://www.etonline.com/news/rss',
+    "Etonline":'https://www.etonline.com/music/rss',
+    
     # Technology
-    "wired": 'https://www.wired.com/feed',
-    "itworld": 'http://itworld.blog/feed',
+    "Wired": 'https://www.wired.com/feed',
+    "Itworld": 'http://itworld.blog/feed',
+    "HT Tech": 'https://tech.hindustantimes.com/rss',
 
 
 }
